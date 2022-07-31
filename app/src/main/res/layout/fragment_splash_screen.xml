@@ -7,28 +7,35 @@
     android:background="@color/main_background"
     tools:context=".screens.splash.SplashScreenFragment">
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:contentDescription="@string/todo"
-        android:src="@drawable/logo"
-        android:layout_marginTop="180dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/app_margin"
-        android:text="@string/app_name"
-        android:textAlignment="center"
-        android:textColor="@color/text_logo_color"
-        android:textSize="@dimen/text_logo_size"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:fontFamily="@font/tt_wellingtons_extra_bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/app_margin"
+            android:fontFamily="@font/tt_wellingtons_extra_bold"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="@color/text_logo_color"
+            android:textSize="@dimen/text_logo_size" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

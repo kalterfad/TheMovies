@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -18,9 +20,14 @@ android {
     }
 
     buildTypes {
+        def API = "API"
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            buildConfigField "String", "API", "\"8YlTgQ0ZIDPQ6e7C1lqXT6FVvJgMDiNH\""
         }
     }
     compileOptions {
@@ -49,8 +56,14 @@ dependencies {
     //Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.3'
 
     //Coil
-    implementation("io.coil-kt:coil:1.4.0")
+    implementation("io.coil-kt:coil:2.1.0")
+
+    //Shimmer
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    //Dagger
+    implementation 'com.google.dagger:dagger:2.43'
+    kapt 'com.google.dagger:dagger-compiler:2.43'
 }

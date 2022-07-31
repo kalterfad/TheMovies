@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">Movie Test</string>
+    <string name="app_name">The Movies</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="todo">TODO</string>
+    <string name="movie_name">Название фильма</string>
+    <string name="movie_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed ornare sapien, non aliquam massa. Vivamus porttitor pretium efficitur.</string>
 </resources>
